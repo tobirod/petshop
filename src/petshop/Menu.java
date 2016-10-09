@@ -11,7 +11,7 @@ ClearConsole petshopClearConsole = new ClearConsole();
 
 private Scanner menuInput = new Scanner(System.in);
 
-    public void startMenu() throws IOException {
+    public void startMenu() {
         
         System.out.println("\nHej och välkommen till Zoobutiken!");
         System.out.println("För att navigera i menyn, skriv in den siffra som motsvarar ditt val och avsluta med \"Enter\".\n");
@@ -44,10 +44,9 @@ private Scanner menuInput = new Scanner(System.in);
                 startMenu();
                 break;
         }
-        
     }
     
-    public void createNewAccountMenu() throws IOException {
+    public void createNewAccountMenu() {
 
         System.out.println("\n1 - Skapa nytt kundkonto.");
         System.out.println("2 - Skapa nytt adminkonto.");
@@ -79,7 +78,7 @@ private Scanner menuInput = new Scanner(System.in);
         }
     }
 
-    public void setUserInfoMenu() throws IOException {
+    public void setUserInfoMenu() {
         
         System.out.println("\nVar god ange önskat användarnamn - om du vill avbryta, skriv \"avbryt\":");
         System.out.println("___________________________________________________________________________________________________\n");
@@ -116,10 +115,9 @@ private Scanner menuInput = new Scanner(System.in);
         startMenu();
         }
         }
-        
     }
     
-    public void setAdminInfoMenu() throws IOException {
+    public void setAdminInfoMenu() {
 
         System.out.println("\nVar god ange lösenordet för administrativa rättigheter - om du vill avbryta skriv \"avbryt\":");
         System.out.println("___________________________________________________________________________________________________\n");
@@ -171,10 +169,9 @@ private Scanner menuInput = new Scanner(System.in);
         }
         }
         }
-        
     }
     
-    public void logInMenu() throws IOException {
+    public void logInMenu() {
         
         System.out.println("\nVar god ange användarnamn - om du vill avbryta skriv \"avbryt\":");
         System.out.println("___________________________________________________________________________________________________\n");
@@ -219,7 +216,8 @@ private Scanner menuInput = new Scanner(System.in);
         }
     }
     
-    public void adminMenu() throws IOException {
+    public void adminMenu() {
+        
         petshopClearConsole.clearConsoleRobot();
         
         System.out.println("\n1 - Sök efter produkt.");
@@ -267,7 +265,8 @@ private Scanner menuInput = new Scanner(System.in);
         }
     }
     
-    public void userMenu() throws IOException {
+    public void userMenu() {
+        
         petshopClearConsole.clearConsoleRobot();
         
         System.out.println("\n1 - Sök efter produkt.");
@@ -299,5 +298,4 @@ private Scanner menuInput = new Scanner(System.in);
                 break;
         }
     }
-    
 }

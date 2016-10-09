@@ -25,8 +25,8 @@ public class ClearConsole {
 
         TimeUnit.MILLISECONDS.sleep(200);
 
-        } catch (InterruptedException ex) {
-        System.out.println(ex);
+        } catch (InterruptedException clearConsoleRobotEx) {
+        System.out.println(clearConsoleRobotEx);
         }
     }
     

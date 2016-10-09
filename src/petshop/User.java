@@ -21,7 +21,8 @@ String adminPassInput;
 String adminPassBufferInput;
 String adminPass = "admin123";
 
-    public void createNewAccount() throws IOException {
+    public void createNewAccount() {
+        try {
         
         petshopClearConsole.clearConsoleRobot();
         
@@ -42,10 +43,12 @@ String adminPass = "admin123";
         }
         
         isAdmin = "false";
-        
+        } catch (IOException createNewAccountEx) {
+            System.out.println(createNewAccountEx);
+        }
     }
     
-    public void adminPassAuth() throws IOException {
+    public void adminPassAuth() {
         
         if (adminPassBufferInput.equals(adminPass)) {
             isAdmin = "true";
@@ -71,7 +74,10 @@ String adminPass = "admin123";
         }
     }
     
-    public static ArrayList<User> readUserInfo() throws FileNotFoundException, IOException {
+    public static ArrayList<User> readUserInfo() {
+        ArrayList<User> userList = new ArrayList();
+        
+        try {
         
         BufferedReader readFile = new BufferedReader(new FileReader("users.txt"));
         
@@ -81,7 +87,6 @@ String adminPass = "admin123";
         
         int count = 0;
         String userInfoSplitter;
-        ArrayList<User> userList = new ArrayList();
         
         while(count < splitUsers.length){
             userInfoSplitter = splitUsers[count];
@@ -96,12 +101,14 @@ String adminPass = "admin123";
             userList.add(readUserIntoUserList);
             
             count++;
-            
+        }
+        } catch (IOException readUserInfoEx) {
+            System.out.println(readUserInfoEx);
         }
         return userList;
     }
     
-    public void checkIfUserNameTaken() throws IOException {
+    public void checkIfUserNameTaken() {
         
         for (int userCount = 0; userCount < User.readUserInfo().size(); userCount++) {
             

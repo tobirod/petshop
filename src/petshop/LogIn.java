@@ -1,7 +1,6 @@
 package petshop;
 
 import java.util.Scanner;
-import java.io.IOException;
 
 public class LogIn {
 
@@ -20,7 +19,7 @@ Boolean checkAdmin = false;
 int userCount = 0;
 int passCount = 0;
     
-    public void logIn() throws IOException {
+    public void logIn() {
         
         while (userCount < User.readUserInfo().size()) {
             
@@ -36,7 +35,7 @@ int passCount = 0;
         }
     }
     
-    public void checkLogInPass() throws IOException {
+    public void checkLogInPass() {
                 
         if (logInBuffer.equals(User.readUserInfo().get(passCount).userPass)) {
             passMatch = true;
@@ -45,7 +44,7 @@ int passCount = 0;
         }
     }
     
-    public void checkIfAdmin() throws IOException {
+    public void checkIfAdmin() {
         
         if (User.readUserInfo().get(passCount).isAdmin.equalsIgnoreCase("true")) {
             checkAdmin = true;
@@ -54,7 +53,7 @@ int passCount = 0;
         }
     }
     
-    public void noUserFound() throws IOException {
+    public void noUserFound() {
         
         petshopClearConsole.clearConsoleRobot();
 
@@ -74,7 +73,7 @@ int passCount = 0;
         logIn();
     }
     
-    public void noPassMatch() throws IOException {
+    public void noPassMatch() {
         
         petshopClearConsole.clearConsoleRobot();
 

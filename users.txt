@@ -1,1 +1,1 @@
-username,userpass,null&ulf,123,false&ulf,123,false&ulf,123,false&,,false&,,false&,,false&
+username,userpass,null&tobias,123,false&fredrik,123,true&
